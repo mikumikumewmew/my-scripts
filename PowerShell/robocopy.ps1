@@ -1,10 +1,7 @@
-Param(
- # Might put these into the program because I have already started to forget to put these parameters in.
-	$NumberOfPaths = 1,
-	$LogDrive = "D"
-)
-
 # Source is abbreviated as Src, Destination is abbreviated as Dest
+
+$NumberOfPaths = Read-Host -Prompt "How many directories do you want to copy?"
+$LogDrive = Read-Host -Prompt "Which drive do you want to save the log to?"
 
 For ($i=1; $i -le $NumberOfPaths; $i++){
     $NewPath = Read-Host -Prompt "Enter Source Path $i"
