@@ -14,5 +14,4 @@ For ($i=1; $i -le $NumberOfPaths; $i++){
 	$CurrentSrc = Get-Variable -Name "SrcPath$i" -ValueOnly
 	$CurrentDest = Get-Variable -Name "DestPath$i" -ValueOnly
 	robocopy $CurrentSrc $CurrentDest /MIR /SEC /XJ /XX /E /V /R:2 /W:1 /TEE /LOG:"${LogDrive}:\robocopy$i.log"
-	robocopy /E /COPY:S /IS /IT /XJ /R:2 /W:1 $CurrentSrc $CurrentDest
 }
